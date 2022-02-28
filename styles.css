@@ -3,6 +3,10 @@
   font-family: Arial;
 }
 
+html {
+  font-size: 16px;
+}
+
 body{
   background-color: hsl(240, 3%, 7%);
   display: flex;
@@ -10,7 +14,11 @@ body{
   min-height: 100vh;
   margin: 0;
   padding: 1em;
-  font-size: clamp(0.5rem, 2.5vmin, 1.5rem);
+  font-size: clamp(0.8rem, 2.5vmin, 1.5rem);
+}
+
+.title {
+  color:hsl(14, 95%, 85%);
 }
 
 button {
@@ -44,7 +52,7 @@ button:hover, button:focus {
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
   grid-auto-rows: 3em;
-  gap: 0.25em;
+  gap: 0.3em;
   justify-content: center;
 }
 
@@ -105,7 +113,7 @@ button:hover, button:focus {
 }
 
 .tile {
-  font-size: 2em;
+  font-size: 1.4em;
   color: rgb(116, 186, 252);
   border: 0.05em solid hsl(240, 2%, 23%);
   text-transform: uppercase;

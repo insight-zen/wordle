@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%237d6ee7%22></rect><path fill=%22%23fff%22 d=%22M77.30 39.47L77.30 39.47L77.37 38.06Q77.37 32.89 75.53 29.78L75.53 29.78Q74.59 28.23 73.40 28.23L73.40 28.23Q71.37 28.23 71.37 31.25Q71.37 34.26 73.11 36.59Q74.84 38.93 77.30 39.47ZM81.60 38.78L81.60 38.78L81.60 39.47L81.60 39.68Q85.14 39.18 89.98 36.36L89.98 36.36Q91.82 35.31 93.45 33.98L93.45 33.98L93.45 38.13Q87.20 42.43 81.53 43.44L81.53 43.44Q80.98 51.93 75.42 61.58L75.42 61.58Q69.35 71.99 61.98 76.29L61.98 76.29Q57.86 78.67 53.85 78.67L53.85 78.67Q48.93 78.67 45.79 74.81L45.79 74.81Q44.60 73.32 43.97 71.63Q43.33 69.93 43.12 68.84L43.12 68.84Q40.44 72.49 35.78 75.55Q31.12 78.60 27.90 78.60Q24.69 78.60 22.36 77.01Q20.03 75.42 18.69 72.89L18.69 72.89Q16.09 67.87 16.09 61.53Q16.09 55.19 18.31 47.72Q20.53 40.26 24.40 35.02L24.40 35.02Q25.23 33.83 26.33 31.83Q27.44 29.82 27.44 29.46Q27.44 29.10 27.34 29.10Q27.25 29.10 26.89 29.31L26.89 29.31L22.77 32.49Q22.20 32.82 19.59 34.44L19.59 34.44Q12.66 38.78 6.55 42.43L6.55 42.43L6.55 38.42Q10.60 36.11 18.15 31.45L18.15 31.45Q34.44 21.33 36.00 21.33L36.00 21.33Q36.97 21.33 36.97 22.09L36.97 22.09Q36.97 23.50 33.29 32.28L33.29 32.28Q26.31 48.97 26.31 56.63L26.31 56.63Q26.31 70.04 34.30 70.04L34.30 70.04Q36.18 70.04 38.87 68.43Q41.56 66.82 42.76 64.83L42.76 64.83Q42.47 63.39 42.47 60.33Q42.47 57.28 42.79 53.96Q43.12 50.63 43.93 47.04Q44.74 43.44 45.94 40.64Q47.13 37.84 49.06 36.02Q50.99 34.19 53.34 34.19L53.34 34.19Q56.31 34.19 56.31 38.35L56.31 38.35Q56.31 43.62 51.86 55.87L51.86 55.87Q50.89 58.62 50.20 60.35L50.20 60.35L49.48 62.12Q49.48 64.22 50.74 65.77L50.74 65.77Q53.20 68.77 58.08 68.77L58.08 68.77Q61.65 68.77 65.23 66.06Q68.81 63.35 71.30 59.41Q73.79 55.47 75.37 51.08Q76.94 46.69 76.94 43.30L76.94 43.30Q74.84 42.97 72.82 41.60Q70.79 40.23 69.64 38.96L69.64 38.96Q66.86 35.93 66.86 31.63L66.86 31.63Q66.86 28.19 68.59 25.16L68.59 25.16Q70.54 21.76 74.62 21.76L74.62 21.76Q81.60 21.76 81.60 38.78Z%22></path></svg>" />
+  <link rel="stylesheet" href="styles.css">
+  <script src="./lib/module.js" type="module"></script>
+  <title>Wordle Test</title>
+</head>
+<body>
+  <div class="title">Module Version</div>
+  <div class="alert-container" data-alert-container></div>
+<div data-guess-grid class="guess_grid">
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+  <div class="tile"></div>
+</div>
+
+<div class="keyboard" data-keyboard>
+  <button class="key" data-key="Q">Q</button>
+  <button class="key" data-key="W">W</button>
+  <button class="key" data-key="E">E</button>
+  <button class="key" data-key="R">R</button>
+  <button class="key" data-key="T">T</button>
+  <button class="key" data-key="Y">Y</button>
+  <button class="key" data-key="U">U</button>
+  <button class="key" data-key="I">I</button>
+  <button class="key" data-key="O">O</button>
+  <button class="key" data-key="P">P</button>
+  <div class="space"></div>
+  <button class="key" data-key="A">A</button>
+  <button class="key" data-key="S">S</button>
+  <button class="key" data-key="D">D</button>
+  <button class="key" data-key="F">F</button>
+  <button class="key" data-key="G">G</button>
+  <button class="key" data-key="H">H</button>
+  <button class="key" data-key="J">J</button>
+  <button class="key" data-key="K">K</button>
+  <button class="key" data-key="L">L</button>
+  <div class="space"></div>
+
+  <button class="key large" data-enter>Enter</button>
+  <button class="key" data-key="Z">Z</button>
+  <button class="key" data-key="X">X</button>
+  <button class="key" data-key="C">C</button>
+  <button class="key" data-key="V">V</button>
+  <button class="key" data-key="B">B</button>
+  <button class="key" data-key="N">N</button>
+  <button class="key" data-key="M">M</button>
+  <button class="key large" data-delete><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+    <path fill="var(--color-tone-1)" d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H7.07L2.4 12l4.66-7H22v14zm-11.59-2L14 13.41 17.59 17 19 15.59 15.41 12 19 8.41 17.59 7 14 10.59 10.41 7 9 8.41 12.59 12 9 15.59z"></path>
+  </svg></button>
+</div>
+
+<button class="replay" data-replay>Replay</button>
+
+</body>
+</html>
