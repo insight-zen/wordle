@@ -21,6 +21,30 @@ body{
   color:hsl(14, 95%, 85%);
 }
 
+.hidden{
+  opacity: 0;
+  transition: all 0.2s;
+  display: none;
+}
+
+.pop-div{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #efefef;
+  padding: 0.5em;
+  z-index: 1;
+  padding-top: 2em;
+  font-size: 1rem;
+}
+
+.pop-div .close {
+  --fg: #898989;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 button {
   font-size: inherit;
   background-color: hsl(
@@ -35,6 +59,14 @@ button:hover, button:focus {
   --lightness-offset: 10%;
 }
 
+button.pop {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 1em 1em 0 0;
+  color: rgb(251, 255, 0);
+}
+
 .replay {
   --saturation: 50%;
   --lightness: 75%;
@@ -47,7 +79,6 @@ button:hover, button:focus {
 
 .replay:hover { --lightness-offset: -10%; }
 
-
 .keyboard{
   display: grid;
   grid-template-columns: repeat(20, minmax(auto, 1.25em));
@@ -55,8 +86,6 @@ button:hover, button:focus {
   gap: 0.3em;
   justify-content: center;
 }
-
-
 
 .key {
   grid-column: span 2;
