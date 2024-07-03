@@ -14,7 +14,7 @@ body{
   min-height: 100vh;
   margin: 0;
   padding: 1em;
-  font-size: clamp(0.8rem, 2.5vmin, 1.5rem);
+  /* font-size: clamp(0.8rem, 2.5vmin, 1.5rem); */
 }
 
 .white{
@@ -104,6 +104,11 @@ button.pop {
   text-transform: uppercase;
   border-radius: .25em;
   user-select: none;
+  font-size: 1.1rem;
+}
+
+.key.enter {
+  font-size: 0.9rem;
 }
 
 .key.large {
@@ -139,11 +144,11 @@ button.pop {
   display: grid;
   justify-content: center;
   align-content: center;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   grid-template-columns: repeat(5, 4em);
   grid-template-rows: repeat(6, 4em);
-  gap: 0.25em;
-  margin-bottom: 1em;
+  gap: 0.5em;
+  margin: 10vh 2px 10vh 2px;
 }
 
 .tile {
