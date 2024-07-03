@@ -9,18 +9,23 @@ html {
 
 body{
   background-color: hsl(240, 3%, 7%);
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   min-height: 100vh;
   margin: 0;
   padding: 1em;
   /* font-size: clamp(0.8rem, 2.5vmin, 1.5rem); */
 }
 
+@media (max-width: 400px){
+  body {
+    padding: 2px; 
+  }
+}
+
 .white{
   background-color: #efefef;
 }
-
 
 .title {
   color:hsl(14, 95%, 85%);
@@ -30,24 +35,6 @@ body{
   opacity: 0;
   transition: all 0.2s;
   display: none;
-}
-
-.pop-div{
-  position: absolute;
-  top: 0;
-  right: 0;
-  background-color: #efefef;
-  padding: 0.5em;
-  z-index: 1;
-  padding-top: 2em;
-  font-size: 1rem;
-}
-
-.pop-div .close {
-  --fg: #898989;
-  position: absolute;
-  right: 0;
-  top: 0;
 }
 
 button {
@@ -84,9 +71,12 @@ button.pop {
 
 .replay:hover { --lightness-offset: -10%; }
 
+/* -- Keyboard */
+
 .keyboard{
   display: grid;
-  grid-template-columns: repeat(20, minmax(auto, 1.25em));
+  /* grid-template-columns: repeat(20, minmax(auto, 1.25em)); */
+  grid-template-columns: repeat(20, 0.95rem);
   grid-auto-rows: 3em;
   gap: 0.3em;
   justify-content: center;
@@ -104,7 +94,7 @@ button.pop {
   text-transform: uppercase;
   border-radius: .25em;
   user-select: none;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .key.enter {
@@ -140,6 +130,8 @@ button.pop {
   --lightness: 43%;
 }
 
+/* -- Guess Grid -- */
+
 .guess_grid{
   display: grid;
   justify-content: center;
@@ -152,9 +144,10 @@ button.pop {
 }
 
 .tile {
+  --brd: oklch(0.4 0.14 280);
   font-size: 1.4em;
-  color: rgb(116, 186, 252);
-  border: 0.05em solid hsl(240, 86%, 63%);
+  color: rgb(116, 186, 252); var(--brd);
+  border: 0.05em solid var(--brd);
   text-transform: uppercase;
   font-weight: bold;
   display: flex;
@@ -165,7 +158,9 @@ button.pop {
 }
 
 .tile[data-state="active"] {
-  border-color: hsl(240, 86%, 83%);
+  /* border-color: hsl(240, 46%, 83%); */
+  border-color: oklch(from var(--brd) calc(l + 0.3) c h);
+  /* border: 0.05em solid oklch(from var(--brd) calc(l + 0.3) c h); */
 }
 
 .tile[data-state="wrong"] {
@@ -239,6 +234,27 @@ button.pop {
     transform: translateY(0);
   }
 }
+
+/* Alerts and popups */
+
+.pop-div{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #efefef;
+  padding: 0.5em;
+  z-index: 1;
+  padding-top: 2em;
+  font-size: 1rem;
+}
+
+.pop-div .close {
+  --fg: #898989;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 
 .alert-container {
   position: fixed;
