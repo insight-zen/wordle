@@ -1,0 +1,15 @@
+localhost {
+  tls {env.SSL_CERT} {env.SSL_KEY}
+  file_server
+  # https://dev.to/andreasbergstrom/understanding-cache-control-and-etag-for-efficient-web-caching-2nf5
+  # "no-cache" makes the browser check before service
+  # no-store, must-revalidate: are not needed here
+  header {
+     Cache-Control "no-cache" 
+  }
+}
+
+a.dev.test {
+  tls {env.SSL_CERT} {env.SSL_KEY}
+  file_server		 
+}

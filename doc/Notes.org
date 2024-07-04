@@ -1,0 +1,9 @@
+* Use ~caddy~ for local testing.
+  Start the server with =caddy start=. If you make changes to
+  ~CaddyFile~ run =caddy reload=. Server runs in the background.
+
+  Current ~CaddyFile~ uses local certs from the ENV variables.
+  
+  To stop caddy, =caddy stop=.
+  
+

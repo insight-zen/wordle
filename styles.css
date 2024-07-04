@@ -67,6 +67,7 @@ button.pop {
   top: 5vh;
   padding: .5em;
   border: none;
+  border-radius: 0.5em;
 }
 
 .replay:hover { --lightness-offset: -10%; }
@@ -140,7 +141,7 @@ button.pop {
   grid-template-columns: repeat(5, 4em);
   grid-template-rows: repeat(6, 4em);
   gap: 0.5em;
-  margin: 10vh 2px 10vh 2px;
+  margin: 10vh 2px 3vh 2px;
 }
 
 .tile {
@@ -275,6 +276,11 @@ button.pop {
   opacity: 1;
   transition: opacity 500ms ease-in-out;
   margin-bottom: .5em;
+}
+
+.alert.go {
+  background-color: hsl(186 66% 45%);
+  color: #fff;
 }
 
 .alert:last-child{
