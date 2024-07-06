@@ -5,5 +5,7 @@
   Current ~CaddyFile~ uses local certs from the ENV variables.
   
   To stop caddy, =caddy stop=.
-  
+
+
+  let str = "const scrbDict = [" + ws.map(w => `"${w}"`).join(", ") + "]";
 
