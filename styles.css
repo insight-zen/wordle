@@ -131,6 +131,54 @@ button.pop {
   --lightness: 43%;
 }
 
+/* -- Anagram Game -- */
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(var(--ncols, 8), var(--colwid, 0.95rem));
+  grid-auto-rows: 3em;
+  gap: var(--gap, 0.3em);
+  justify-content: center;
+}
+
+#wrap {
+  --ncols: 8;
+  --brd: #ffa;
+}
+
+#rack {
+  --colwid: 2.5em;
+  --bg: oklch(0.4 0.1 63);
+  --fg: oklch(0.96 0.16 111);
+  margin-top: 1em;
+  & .key {
+    grid-column: span 1;
+  }
+  & .key.large {
+    grid-column: span 2;
+  }
+}
+
+#attempt{
+  --colwid: 3em;
+  margin-top: 2em;
+}
+
+#answers{
+  --ncols: 2;
+  --colwid: 8ch;
+  display: grid;
+  max-width: 400px;
+  grid-auto-rows: auto;
+  .response {
+    color: #fff;
+    border: 1px solid #cdcdcd;
+    padding: 3px;
+  }
+}
+
 /* -- Guess Grid -- */
 
 .guess_grid{
@@ -147,7 +195,9 @@ button.pop {
 .tile {
   --brd: oklch(0.4 0.14 280);
   font-size: 1.4em;
-  color: rgb(116, 186, 252); var(--brd);
+  /* color: rgb(116, 186, 252);  */
+  color: var(--fg,  rgb(116, 186, 252));
+  background-color: var(--bg, oklch(0.2, 0.1, 0));
   border: 0.05em solid var(--brd);
   text-transform: uppercase;
   font-weight: bold;

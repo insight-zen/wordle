@@ -1,12 +1,27 @@
-const version = 1
+const version = 2
 const staticName = `static-${version}`
 const dynamicName = `dynamic-${version}`
+
+const logLevel = 0
 
 // const assets = ["/", "/lib/module.js", "/lib/wordle.js", "/lib/target5.js"]
 // abcdef
 const assets = ["/"]
 
 // Registration > Installation > Activation
+//
+// ev.waitUntil() : Await inside event Handler. Waits for the promise to resolve
+//   - can be called in any eventEH
+//   - e.g. prefetch assets in install, purge caches in activate
+//
+// self.skipWaiting() : Go ahead and activate right away.
+//   - Without this all tabs have to close in the browser for the new version to activate
+//   - Same was clicking on "skip waiting" in devtools.
+//   - called in installEH
+//
+// clients.claim() : Take over existing clients.
+//   - called from activateEH
+//
 const installEH = (event) => {
   console.log(`   - SW Installation triggered`)
   event.waitUntil(
@@ -19,12 +34,12 @@ const installEH = (event) => {
 
 // Makes a fetch request and saves to cache
 const customFetch = (request, opts={}) => {
-  console.log(`   -- Server Fetch ${request.url}`)
+  if (logLevel > 0) console.log(`   -- Server Fetch ${request.url}`)
   return fetch(request)
     .then( (resp) => {
-      console.log(`   -- Received [${resp.status}] for ${request.url}`);
+      if (logLevel > 0) console.log(`   -- Received [${resp.status}] for ${request.url}`);
       const respCopy = resp.clone()
-      caches.open(staticName).then(cache => cache.put(request, respCopy))
+      if (!opts.noSave) caches.open(staticName).then(cache => cache.put(request, respCopy))
       return(resp)
     }, 
       (err) => { console.log(`Error in fetching ${request.url}`, err) })
@@ -33,10 +48,8 @@ const customFetch = (request, opts={}) => {
 const fetchEH = (event) => {
   event.respondWith(
     caches.match(event.request).then(cacheResp => {
-      console.log(`   - Fetch ${cacheResp ? 'YES' : ' NO'} ${event.request.url}`)
-      return cacheResp || customFetch(event.request)})
-  )
-}
+      if (logLevel > 0) console.log(`   - Fetch ${cacheResp ? 'YES' : ' NO'} ${event.request.url}`)
+      return cacheResp || customFetch(event.request, {noSave: true})}))}
 
 const activateEH = (event) => {
   const clean = true

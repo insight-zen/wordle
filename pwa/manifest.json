@@ -1,0 +1,21 @@
+{
+  "name": "Wordle and more",
+  "short_name": "moreWordle",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f00",
+  "theme_color": "#00f",
+  "icons": [
+    {
+      "sizes": "192x192",
+      "src": "icons/icon-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "icons/icon-512x512.png",
+      "type": "image/png"
+    }
+  ]  
+}
