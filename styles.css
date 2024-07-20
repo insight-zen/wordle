@@ -59,6 +59,18 @@ button.pop {
   color: rgb(251, 255, 0);
 }
 
+.btn {
+  background-color: var(--bg, oklch(0.8 0.11 247));
+  background-color: oklch(from var(--bg, oklch(0.8 0.11 247)) calc(l + var(--lightness-offset, 0)) c h);
+  border-radius: 0.4em;
+  padding: 0.5em;
+  line-height: 1;
+  cursor: pointer;
+  &:hover{
+    --lightness-offset: -0.1;    
+  }
+}
+
 .replay {
   --saturation: 50%;
   --lightness: 75%;
