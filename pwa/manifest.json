@@ -1,10 +1,10 @@
 {
   "name": "Wordle and more",
   "short_name": "moreWordle",
-  "start_url": "/",
+  "start_url": "/wordle",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#f00",
+  "background_color": "#afafaf",
   "theme_color": "#00f",
   "icons": [
     {
