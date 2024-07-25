@@ -1,0 +1,16 @@
+#+STARTUP: hidestars
+* TODO TGH Refactor [0/3]
+** Top Navigation Bar [1/1]
+   - [X] Div with styling
+** [ ] Play along help [0/2]
+   - [ ] Popup and remove help div
+   - [ ] Separate Game (Logic) from Board (UI)
+** [ ] Game tracker [/]
+   - [ ] Track game time
+** [ ] 
+** TODO 
+** TODO 
+** [ ] Two
+* TODO Inbox [0/0]
+** [ ] nodejs command line script to convert a text file to a word array json
+

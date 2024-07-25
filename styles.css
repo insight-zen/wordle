@@ -23,6 +23,23 @@ body{
   }
 }
 
+.topnav {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  border-bottom: 1px solid #898989;
+  & .left { color: #efffff; }
+  & .cen {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  & .right {
+  }
+  & .replay { position: inherit; }
+}
+
 .white{
   background-color: #efefef;
 }
@@ -316,6 +333,12 @@ button.pop {
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
+  border: 1px solid #efefef;
+  &:hover{
+    background-color: #ffefef;
+    border-color: #00f;
+  }
 }
 
 
