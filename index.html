@@ -8,11 +8,19 @@
   <link rel="stylesheet" href="styles.css">
   <script src="./lib/module.js" type="module"></script>
   <link rel="manifest" href="pwa/manifest.json">
-  <title>Binge Wordle</title>
+  <title>Binge New</title>
 </head>
 <body>
-  New Content
-  <div class="alert-container" data-alert-container></div>
+  <div class="topnav">
+    <div class="left">
+      <button class="replay" data-replay>Replay</button>
+    </div>
+    <div class="cen"></div>
+    <div class="right">
+      <span data-hmenu>Help</span>
+    </div>
+  </div>
+  <div id="alert-container" class="alert-container" data-alert-container></div>
 <div data-guess-grid id="guess-grid" class="guess_grid">
   <div class="tile"></div>
   <div class="tile"></div>
@@ -83,7 +91,6 @@
   </svg></button>
 </div>
 
-<button class="replay" data-replay>Replay</button>
 
 </body>
 </html>

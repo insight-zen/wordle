@@ -3,6 +3,12 @@
   font-family: Arial;
 }
 
+:root{
+  --c-magenta: oklch(0.61 0.24 331);
+  --c-green: oklch(71 25 149);
+  --c-blue: oklch(0.55 0.18 255);
+}
+
 html {
   font-size: 16px;
 }
@@ -28,7 +34,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center; 
-  border-bottom: 1px solid #898989;
+  // border-bottom: 1px solid #898989;
   & .left { color: #efffff; }
   & .cen {
     position: absolute;
@@ -91,6 +97,8 @@ button.pop {
 .replay {
   --saturation: 50%;
   --lightness: 75%;
+  background-color: var(--c-blue);
+  color: #fff;
   position: fixed;
   left: 4vw;
   top: 5vh;
@@ -355,17 +363,23 @@ button.pop {
 
 .alert {
   pointer-events: none;
-  background-color: hsl(14, 95%, 85%);
-  padding: .75em;
+  color: #fff;
+  background-color: var(--c-magenta);
   border-radius: .25em;
   opacity: 1;
   transition: opacity 500ms ease-in-out;
   margin-bottom: .5em;
+  padding: 0.5em 0.75em;
 }
 
 .alert.go {
-  background-color: hsl(186 66% 45%);
+  background-color: var(--c-blue);
   color: #fff;
+}
+
+.alert.win{
+  background-color: var(--c-green);
+  color: #000;
 }
 
 .alert:last-child{
