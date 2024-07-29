@@ -1,16 +1,25 @@
 #+STARTUP: hidestars
-* TODO TGH Refactor [0/3]
+* TODO TGH Refactor [0/1]
 ** Top Navigation Bar [1/1]
    - [X] Div with styling
-** [ ] Play along help [0/2]
-   - [ ] Popup and remove help div
-   - [ ] Separate Game (Logic) from Board (UI)
-** [ ] Game tracker [/]
-   - [ ] Track game time
-** [ ] 
-** TODO 
-** TODO 
-** [ ] Two
-* TODO Inbox [0/0]
-** [ ] nodejs command line script to convert a text file to a word array json
+** Play along help [2/3]
+   - [X] Popup and remove help div
+   - [X] Separate Game (Logic) from Board (UI)
+   - [ ] Hint dialog and UI
+*** Analyze move before submitting
+   - [ ] Take input before adding to the game
+   - [ ] Compare game current state with state with the move
+   - [ ] Suggestions 
+** Stats based help [0/1]
+   - [ ] With some picked and some placed show help for next steps
+** Game tracker [1/1]
+   - [X] Track game time
+
+* TODO Inbox [0/3]
+  - [ ] nodejs command line script to convert a text file to a word array json
+  - [ ] Popup navbar
+  - [ ] Service worker to use caching
+  - [ ] In help code, make sure that Sets and Maps are not using rest operators wherever possible
+    
+    
 
