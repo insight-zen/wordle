@@ -1,4 +1,4 @@
-const version = 2
+const version = 4
 const staticName = `static-${version}`
 const dynamicName = `dynamic-${version}`
 
@@ -6,7 +6,7 @@ const logLevel = 0
 
 // const assets = ["/", "/lib/module.js", "/lib/wordle.js", "/lib/target5.js"]
 // abcdef
-const assets = ["/"]
+const assets = [] // file here
 
 // Registration > Installation > Activation
 //
@@ -24,13 +24,13 @@ const assets = ["/"]
 //
 const installEH = (event) => {
   console.log(`   - SW Installation triggered`)
+  self.skipWaiting()
   event.waitUntil(
     caches.open(staticName)
       .then(cache => {
 	return cache.addAll(assets).then(  // addAll = fetch + put
 	  () => console.log(`  - ${staticName} has been updated`),
 	  (err) => console.warn(`  - ${staticName} update failed.`, err))}))}
-
 
 // Makes a fetch request and saves to cache
 const customFetch = (request, opts={}) => {
@@ -74,4 +74,4 @@ self.addEventListener("activate", activateEH)
 
 self.addEventListener("fetch", fetchEH)
 
-self.addEventListener("fetch", messageEH)
+self.addEventListener("message", messageEH)
