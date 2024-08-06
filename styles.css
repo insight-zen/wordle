@@ -101,18 +101,22 @@
       padding: 0.75em;
       color: var(--c-white);
       border-bottom: 1px solid var(--bg);
-      &:hover{
-	background-color: var(--bg-btn);
-	color: var(--c-white);
-      }
       a {
 	color: var(--c-white);
 	&:hover{
 	  color: var(--c-white);
 	}
       }
+      &:not(:has(button)){
+	&:hover{
+	  background-color: var(--bg-btn);
+	  color: var(--c-white);
+	}
+      }
+      
     }
   }
+
 
   
   .topnav {

@@ -11,5 +11,7 @@ localhost {
 
 a.dev.test {
 	tls {env.SSL_CERT} {env.SSL_KEY}
-	file_server
+	file_server browse {
+		hide *~ #*
+	}
 }
