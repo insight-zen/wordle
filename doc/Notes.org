@@ -9,3 +9,12 @@
 
   let str = "const scrbDict = [" + ws.map(w => `"${w}"`).join(", ") + "]";
 
+** Run caddy with a custom config
+#+begin_src sh
+  # If the config file CaddyFile is in a different directory
+  caddy run --config Caddyfile_in_some_other_dir
+
+  # To use configuration from some other file (not Caddyfile)
+  # Adding ~--watch~ reloads and restart caddy if the config file changes
+  caddy run --watch  --adapter caddyfile --config caddy/first.config
+#+end_src

@@ -1,0 +1,7 @@
+localhost {
+	tls {env.SSL_CERT} {env.SSL_KEY}
+	file_server browse {
+		hide *~ #*
+	}
+	respond "Hello, world!"
+}
