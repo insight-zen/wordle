@@ -9,7 +9,7 @@ localhost {
 	}
 }
 
-a.dev.test {
+wordle.dev.test {
 	tls {env.SSL_CERT} {env.SSL_KEY}
 	file_server browse {
 		hide *~ #*

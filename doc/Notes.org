@@ -1,13 +1,16 @@
 * Use ~caddy~ for local testing.
-  Start the server with =caddy start=. If you make changes to
-  ~CaddyFile~ run =caddy reload=. Server runs in the background.
+#+begin_src sh
+  # Start the server - server listens on https://localhost or https://wordle.dev.test
+  # localhost: No caching. wordle.dev.test: file_server with browse, caching enables
+  # Reads configuration from ~Caddyfile~
+  caddy start
 
-  Current ~CaddyFile~ uses local certs from the ENV variables.
-  
-  To stop caddy, =caddy stop=.
+  # Stop Caddy
+  caddy stop
 
-
-  let str = "const scrbDict = [" + ws.map(w => `"${w}"`).join(", ") + "]";
+  # If you make changes to ~Caddyfile~
+  caddy reload
+#+end_src
 
 ** Run caddy with a custom config
 #+begin_src sh
@@ -18,3 +21,12 @@
   # Adding ~--watch~ reloads and restart caddy if the config file changes
   caddy run --watch  --adapter caddyfile --config caddy/first.config
 #+end_src
+
+* In the browser
+ ~window.wl~ is mapped to ~Wordle~ which is the App instance.
+ ~window.wDict~ maps to =refDict=
+ ~window.wfit~ maps to =WordFit=
+ 
+
+* Misc Notes
+  let str = "const scrbDict = [" + ws.map(w => `"${w}"`).join(", ") + "]";

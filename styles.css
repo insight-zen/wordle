@@ -132,6 +132,7 @@
       transform: translateX(-50%);
     }
     & .right {
+      padding-right: 0.3em;
     }
     & .replay { position: inherit; }
   }
@@ -205,7 +206,7 @@
   .keyboard{
     display: grid;
     /* grid-template-columns: repeat(20, minmax(auto, 1.25em)); */
-    grid-template-columns: repeat(20, 0.95rem);
+    grid-template-columns: repeat(20, 0.75rem);
     grid-auto-rows: 3em;
     gap: 0.3em;
     justify-content: center;
